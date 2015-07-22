@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TicTacToe</title>
+  <title>Tic Tac Toe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="contianer outer">
+    <header class="container inner">
+      <h1>Tic Tac Toe</h1>
+    </header>
+  </header>
 
-<%= yield %>
+  <section class="container outer">
+    <section class="container inner">
+      <%= yield %>
+    </section>
+  </section>
 
+  <footer class="container outer">
+    <footer class="contanier inner">
+      Written by Michael Fich
+    </footer>
+  </footer>
 </body>
 </html>
