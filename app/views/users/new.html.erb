@@ -1,5 +1,13 @@
 <h2>Register</h2>
 
+<% if @user.errors.any? %>
+  <ul class="errors"></ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @user do |f| -%>
   <div class="field">
     <%= f.label :email %>
